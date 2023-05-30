@@ -34,12 +34,10 @@ const StyledButton = styled.button`
 `;
 
 const Footer = () => {
-  const navigate = useNavigate();
   const { logout } = useAuth();
 
   const handleClick = () => {
-    localStorage.removeItem('authToken');
-    navigate('/signup');
+    logout();
   };
 
   return (
