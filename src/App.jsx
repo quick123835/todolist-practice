@@ -1,6 +1,6 @@
 import { PageContextProvider } from 'contexts/PageContext';
 import './App.scss';
-import { TodoPage, LoginPage, SignUpPage } from './pages';
+import { TodoPage, LoginPage, SignUpPage, HomePage } from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthContextProvider } from 'contexts/AuthContext';
 
@@ -14,6 +14,7 @@ function App() {
               <Route path="/login" element={<LoginPage />}></Route>
               <Route path="/signup" element={<SignUpPage />}></Route>
               <Route path="/todos" element={<TodoPage />}></Route>
+              <Route path="*" element={<HomePage />}></Route>
             </Routes>
           </PageContextProvider>
         </AuthContextProvider>
